@@ -25,4 +25,3 @@ Instrucciones:
 
 Nota:
 - Asegúrate que el backend esté en el puerto indicado (.env PORT=3000) y que VITE_API_BASE_URL apunte a http://localhost:3000
-- Este es un ejemplo educativo; en producción usa migraciones de Sequelize y no uses sync() con force.
