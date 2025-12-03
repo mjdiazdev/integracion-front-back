@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const libroDiarioController = require('../controllers/libroDiario.controller');
+const controller = require('../controllers/libroDiario.controller');
 
-router.get('/', libroDiarioController.generarLibroDiario);
+router.get("/exportar", controller.exportarLibroDiario);
 
 module.exports = router;
