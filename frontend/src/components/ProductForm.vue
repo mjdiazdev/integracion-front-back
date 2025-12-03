@@ -2,12 +2,12 @@
   <form @submit.prevent="saveProduct">
     <div class="mb-3">
       <label class="form-label">Nombre</label>
-      <input v-model="product.name" type="text" class="form-control" required />
+      <input v-model="product.nombre" type="text" class="form-control" required />
     </div>
 
     <div class="mb-3">
       <label class="form-label">Precio</label>
-      <input v-model="product.price" type="number" step="0.01" class="form-control" required />
+      <input v-model="product.precio" type="number" step="0.01" class="form-control" required />
     </div>
 
     <div class="d-flex justify-content-end">
@@ -28,7 +28,7 @@ const props = defineProps({
 })
 const emit = defineEmits(['saved'])
 
-const product = ref({ name: '', price: '' })
+const product = ref({ nombre: '', precio: '' })
 const isEditing = ref(false)
 
 // Detectar si se pasa un producto para editar
@@ -37,7 +37,7 @@ watch(() => props.productToEdit, (newVal) => {
     product.value = { ...newVal }
     isEditing.value = true
   } else {
-    product.value = { name: '', price: '' }
+    product.value = { nombre: '', precio: '' }
     isEditing.value = false
   }
 }, { immediate: true })

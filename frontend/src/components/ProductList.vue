@@ -18,8 +18,8 @@
         <tbody>
           <tr v-for="p in products" :key="p.id">
             <td>{{ p.id }}</td>
-            <td>{{ p.name }}</td>
-            <td>{{ formatCurrency(p.price) }}</td>
+            <td>{{ p.nombre }}</td>
+            <td>{{ formatCurrency(p.precio) }}</td>
             <td>
               <button class="btn btn-warning btn-sm me-2" @click="$emit('edit', p)">
                 Editar
