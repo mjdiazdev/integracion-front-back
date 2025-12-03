@@ -5,6 +5,7 @@ const sequelize = require('./config/database');
 const compraRoutes = require('./routes/compra.routes');
 const gastoRoutes = require('./routes/gasto.routes');
 const libroDiarioRoutes = require('./routes/libroDiario.routes');
+const productoRoutes = require('./routes/producto.routes');
 
 require('./models'); // carga models
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use('/api/compras', compraRoutes);
 app.use('/api/gastos', gastoRoutes);
 app.use('/api/libro-diario', libroDiarioRoutes);
+app.use('/api/productos', productoRoutes);
 
 const PORT = process.env.PORT || 3000;
 
